@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ิbackground</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div>
+    <button id="btn-change">Click me!</button>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#btn-change').click(function() {
+        const randomColor = `#${Math.random().toString(16).slice(2, 8)}`;
+        $('body').css('background-color', randomColor);
+      });
+    });
+  </script>
+</body>
+</html>
